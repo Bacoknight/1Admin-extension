@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "1Admin",
+    "version": "1.0",
+    "description": "Keep track of used software and logins.",
+    "permissions": ["activeTab", "storage", "alarms"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+        }
+    ]
+}  
